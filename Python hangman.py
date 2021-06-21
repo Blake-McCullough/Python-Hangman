@@ -1,10 +1,8 @@
 import random
 
 #variables for word lists
-wordlist1 = [""]
-wordlist2 = [""]
-wordlist3 = [""]
-wordlist4 = [""]
+words=["cat","chicken","dog"]
+
 #prints creators name
 print('Hangman By Blake McCullough')
 
@@ -17,54 +15,6 @@ name = name.capitalize()
 #says a greetings
 print("Hello", name, "Hope you enjoy!")
 
-
-#ask what subject they want to do
-print("What would u like? Mieliestronk's list of over 58,000 english words [Hard] or ?[option 2]")
-
-#gets input for result
-result = input("")
-
-
-
-#capitalizes first letter of word and decapitalize other letters for result
-result = result.capitalize()
-
-
-#choices subject:
-#To add more results copy one of the options and just change what is in the "" and after the words =
-
-#option 1
-if result == "Hard":
-    print("You picked: Mieliestronk's list of over 58,000 english words ")
-    words = wordlist1
-    
-    
-    
-#To add more results copy one of the options and just change what is inside the ""
-
-#option 2    
-elif result == "":
-    print("")
-    words = wordlist2
-    
-#option 3
-
-elif result == "":
-    print("")
-    words = wordlist3
-    
-#option 4
-
-elif result == "":
-    print("")
-    words = wordlist4
-
-#if all fails terminates program
-
-else:
-    print("invalid option")
-    print("please start ")
-    quit()
 
 
 
@@ -100,7 +50,7 @@ def get_guess():
     # Conditions that will print out a message according to
     # invalid inputs
     if len(guess) != 1:
-      print ("Your guess must have exactly one character you fucken retarded tomato!")
+      print ("Your guess must have exactly one character!")
       
       
       
@@ -108,7 +58,7 @@ def get_guess():
     # corresponding dash with the correct index the guess belongs to in the 
     # secret word
     elif guess in secret_word:
-      print ("That letter is in the secret word,you finally did good in your life and now have a purpose")
+      print ("That letter is in the secret word")
       dashes = update_dashes(secret_word, dashes, guess)
       
       
